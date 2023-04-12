@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TalkAboutAll</title>
+
+<style>
+    body {
+        min-height: 100vh;
+        font-family: 'Open Sans', sans-serif;
+        background-image: linear-gradient(65.8deg, #3D6BA1 2.46%, #1F334F 48.82%);
+        background-repeat: no-repeat;
+    }
+    .container {
+        position: fixed;
+        top: 10%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .title {
+        color: #f1f2f3;
+    }
+    .text {
+        text-align: start;
+        font-size: 24px;
+        color: #f1f2f3;
+        margin-bottom: 40px;
+    }
+    .link {
+        padding: 10px 16px;
+        border-radius: 10px;
+        font-size: 18px;
+        color: #f1f2f3;
+        text-decoration: none;
+        background-color: #79A3D3;
+        transition: all 0.15s ease-in;
+    }
+    .link:hover {
+        background-color: #4986CD;
+    }
+    .link:active {
+        color: #151515;
+        background-color: #2080EE;
+    }
+    .preloader {
+        position: absolute;
+        top: 0%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .circle {
+        display:  inline-block;
+        width:  0.5em;
+        height:  0.5em;
+        margin-right: 0.1em;
+        border-radius: 50%;
+        animation-name: circle;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+    }
+    .circle:nth-child(1) {
+        background-color: yellow;
+        animation-delay: 0;
+    }
+    .circle:nth-child(2) {
+        background-color: red;
+        animation-delay: 0.2s;
+    }
+    .circle:nth-child(3) {
+        background-color: green;
+        animation-delay: 0.4s;
+    }
+    .circle:nth-child(4) {
+        background-color: blue;
+        animation-delay: 0.6s;
+    }
+    .circle:nth-child(5) {
+        background-color: violet;
+        animation-delay: 0.8s;
+    }        
+    /* animation */
+    @keyframes circle {
+        from {
+            opacity: 1;
+        }
+        50% {
+            opacity: 0.2;
+        }
+        to {
+            opacity: 1;
+        }
+    }    
+
+</style>
+
+</head>
+<body>
+    <div class="container" id="container">
+        <div class="preloader" id="preloader">
+            <span class="circle"></span>
+            <span class="circle"></span>
+            <span class="circle"></span>
+            <span class="circle"></span>
+            <span class="circle"></span>
+        </div>
+        <p class="text" id="par">
+            Производится активация учетной записи ...
+        </p>
+    </div>
+    
+    <script>
+        window.onload = function() {
+           fetch(`https://talkaboutall.pythonanywhere.com/api/auth/activate/`, { // API на активацию
+                method: "POST",
+                body: JSON.stringify({
+                    uid: "ODA",                                         // сюда UID
+                    token: "bkr5uf-eb76c20078a13313be92ffca58d46885"     // сюда token
+                }),
+                headers: {
+                    "Content-Type": "application/json"
+                }
+            })
+            .then(response => {
+                if (response.status === 204) {
+                        const linkLogin = document.createElement("a")
+                        linkLogin.setAttribute("href", "http://193.168.49.66:44444/") // ссылка на сайт
+                        linkLogin.click()
+                } else { 
+                    showError(undefined, "Активация не пройдена. Истекло время ссылки.")
+                }
+            })
+            .catch(error => {
+                showError(error)
+            })
+
+            function showError(error, text="") {
+                let par = document.querySelector("#par")
+                if (error) {
+                    par.textContent = `${new Error(error).message}`                 
+                } else if (text) {
+                    par.textContent = text
+                }
+                createUserMessage()
+            }
+            function createUserMessage() {
+                const container = document.querySelector("#container")
+                const preloader = document.querySelector("#preloader")
+                
+                const par = document.createElement("p")
+                par.setAttribute("class", "text")
+                par.textContent = "Чтобы перейти на сайт, нажмите кнопку ниже"
+                
+                const link = document.createElement("a")
+                link.setAttribute("href", "http://193.168.49.66:44444/")
+                link.setAttribute("class", "link")
+                link.textContent = "Перейти на сайт"
+                
+                preloader.remove()
+                container.appendChild(par)
+                container.appendChild(link)
+            }
+        }
+    </script>
+</body>
+</html>

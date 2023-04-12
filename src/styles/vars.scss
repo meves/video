@@ -1,0 +1,54 @@
+:root {
+    /* colors */
+    --transparent: transparent;
+    --pure-white: #FFFFFF;
+    --white: #F1F2F3;
+    --black: #151515;
+    
+    --light-blue: #d6f0ff;
+    --blue-border: #00A3FF;
+    --blue-accent: #79A3D3;
+    --blue-active: #3270B7;
+    --blue-cookie: #3084E4;
+    --blue-cookie-hover: #065CBD;
+    --blue-start-hover: #4986CD;
+    --blue-start-active: #2080EE;
+    --blue-link: #0077CF;
+    --dark-blue: #1F334F;
+    --video-bg: #1F2D40;
+
+    --light-light-green: #D6FFE0;
+    --light-green: #76A459;
+    --green: #00A328;
+    --green2: #00FF40;
+
+    --light-light-red: #FFDBD6;
+    --red: #FF1f00;
+    --brown-red: #A45959;
+    --light-grey: #CCCDCD;
+    --grey: #6B6B6B;
+    
+
+    --black-transparent15: rgba(0, 0, 0, 0.15);
+    --black-transparent25: rgba(0, 0, 0, 0.25);
+    --black-transparent70: rgba(0, 0, 0, .7);
+    --blue-transparent70: rgba(121, 163, 211, 0.7);
+        
+    --main-bg: linear-gradient(65.8deg, #3D6BA1 2.46%, #1F334F 48.82%);
+    --speech-bg: linear-gradient(40.73deg, #F1F2F3 0.49%, #4382CB 72.71%);
+    --personal-area-image-block-bg: linear-gradient(40.73deg, #F1F2F3 0.49%, #4382CB 72.71%);
+
+    --border-bottom-header: var(--blue-transparent70);
+    --box-shadow-header: var(--black-transparent25);
+
+    --error-color: var(--red);
+    
+    /* fonts */
+    --open-sans: 'Open Sans', sans-serif;
+    --roboto-condensed: 'Roboto Condensed', sans-serif;
+    
+    /* sizes */
+    --content-width: 1480px; // 1440 + 2x20
+    --content-padding: 20px;
+    --content-padding-mobile: 10px;
+}

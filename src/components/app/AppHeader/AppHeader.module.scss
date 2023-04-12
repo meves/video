@@ -1,0 +1,117 @@
+.appHeader {
+    padding: 30px 0 35px;
+    border-bottom: 1px solid var(--border-bottom-header);
+    box-shadow: 0px 4px 4px var(--box-shadow-header);
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.39;
+    color: var(--white);
+
+    .headerContent {
+        padding-top: 0;
+        padding-bottom: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .left {
+            display: flex;
+            gap: 40px;        
+        }
+        
+        .right {
+            display: flex;
+            gap: 40px;
+    
+            .selectBlock {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                
+                .langsList {
+                    appearance: none;
+                    display: block;
+                    width: 45px;
+                    font-family: var(--open-sans);
+                    font-weight: 400;
+                    font-size: 18px;
+                    line-height: 1.39;
+                    color: inherit;
+                    margin: 0;
+                    padding-right: 12px;
+                    background-color: var(--dark-blue);
+                    outline: none;
+                    border: none;
+                    transition: all .2s ease-in-out;
+                    
+                    &:hover {
+                        font-weight: 700;
+                        cursor: pointer;
+                    }
+                    
+                    &:option { 
+                        font-weight: normal;
+                    }
+                }
+                
+                svg {
+                    margin-left: -9px;
+                    transition: transform 0.15s linear;
+                }
+                
+                &:hover > svg {
+                    transform: rotate(180deg)
+                }
+            }
+
+        
+            .loginBlock {
+                display: flex;
+                justify-content: flex-start;
+                gap: 27px;
+                align-items: center;   
+        
+                .loginLink {
+                    display: block;
+                    padding: 6px 0;
+                    text-decoration: none;
+                    color: inherit;
+                    font-size: 18px;
+                    line-height: 1.6;
+                    transition: all .3s ease-in-out;
+        
+                    &:hover {
+                        color: var(--blue-cookie);
+                    }
+                    
+                }
+            }
+        }
+    }
+}
+        
+.btnLink {
+    display: block;
+    text-decoration: none;
+    color: var(--white);
+    padding: 9px 36px;
+    border: 1px solid var(--white);
+    border-radius: 72px;
+    transition: all .3s ease-in-out;
+
+    &:hover {
+        color: var(--blue-cookie);
+        border: 1px solid var(--blue-cookie);
+    }
+
+    &_blue {
+        background-color: var(--blue-cookie);
+        border: 1px solid var(--blue-cookie);
+
+        &:hover {
+            background-color: var(--blue-cookie-hover);
+            border: 1px solid var(--blue-cookie-hover);
+            color: var(--white);
+        }
+    }
+}

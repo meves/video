@@ -1,0 +1,73 @@
+.formWrapper {
+    
+    .form {
+        flex: 1 1 562px;
+        
+        .fieldset {
+            margin-bottom: 0;
+
+            .inputWrapper {
+                margin-bottom: 8px;
+                
+                &.last {
+                    margin-bottom: 12px;
+                }
+            }
+
+            .checkboxWrapper {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+
+                .checkbox {
+                    appearance: none;
+                    height: 24px;
+                    width: 24px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    outline: none;
+                    background-color: var(--pure-white);
+                    
+                    &:hover {
+                        cursor: pointer;
+                    }
+                    &:checked {
+                        background-color: var(--blue-accent);
+                    }
+
+                    &::after {
+                        content: "";
+                        width: 24px;
+                        height: 24px;
+                        background-image: url("../../../assets/images/forms/checkbox-mark.svg");
+                        background-position: center center;
+                        background-repeat: no-repeat;
+                        background-size: contain;
+                        transition: opacity 0.15s ease-in;
+                        opacity: 0;
+                    }
+                    &:checked::after {
+                        opacity: 1;
+                    }
+                }
+
+                .checkboxLabel {
+                    font-size: 16px;
+                    width: 392px;
+                    margin-left: 12px;
+                    
+                    .link {
+                        color: var(--blue-link);
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+        
+        .buttons {
+            margin-top: 12px;
+            margin-bottom: 13px;
+        }
+    }
+}

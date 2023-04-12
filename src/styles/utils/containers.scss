@@ -1,0 +1,12 @@
+.main-container {
+    max-width: var(--content-width);
+    margin: 0 auto;
+    padding-left: var(--content-padding);
+    padding-right: var(--content-padding);
+    flex-grow: 1;
+
+    @media (max-width:768px) {
+        padding-left: var(--content-padding-mobile);
+        padding-right: var(--content-padding-mobile);
+    }
+}

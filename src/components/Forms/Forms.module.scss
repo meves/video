@@ -1,0 +1,126 @@
+.formWrapper {
+    font-weight: 400;
+    line-height: 1.2;
+    // position: relative;
+
+    .form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        .fieldset {
+            margin-top: 0;
+            padding: 0;
+            border: none;
+
+            .legend {
+                font-size: 24px;
+                text-align: center;
+                margin: 0 auto;
+                margin-bottom: 24px;
+            }
+                
+            .label {
+                display: flex;
+                justify-content: flex-start;
+                align-items: first baseline;
+                margin-bottom: 8px;
+                font-size: 16px;
+
+                span {
+                    margin-left: 4px;
+                }
+            } 
+
+            .inputWrapper {
+                width: 100%;
+                display: flex;
+                flex-wrap: nowrap;
+                position: relative;
+            }
+        }
+
+        .buttons {
+            display: flex;
+            margin-top: 24px;
+            margin-bottom: 25px;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 24px;
+            flex-wrap: nowrap;
+
+            .link {
+                padding: 12px 40px;
+                border: 1px solid var(--white);
+                border-radius: 72px;
+                font-family: var(--open-sans);
+                font-weight: 700;
+                font-size: 20px;
+                line-height: 1.35;
+                color: var(--white);
+                background-color: var(--transparent);
+                text-decoration: none;
+                transition: color 0.15s ease-in, 
+                background-color 0.15s ease-in;
+
+                &_long {
+                    padding: 12px 61px; 
+                }
+
+                &:hover {
+                    cursor: pointer;
+                    border-color: transparent;
+                    background-color: var(--blue-cookie-hover);
+                }
+            }
+
+            .button {
+                padding: 12px 40px;
+                font-weight: 400;
+                font-size: 20px;
+                line-height: 1.35;
+                color: var(--white);
+                background-color: var(--blue-cookie);
+                border-radius: 72px;
+                border: none;
+                cursor: pointer;
+
+                &_long {
+                    padding: 12px 61px; 
+                }
+
+                &_disabled {
+                    cursor: not-allowed;
+                    opacity: .5;
+                }
+
+                &:hover {
+                    background-color: var(--blue-cookie-hover);
+                }
+            }
+        }
+    }
+
+    // login and register forms only
+    .remark {
+        text-align: center;
+        
+        .text {
+            font-size: 18px;
+        }
+
+        .link {
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 1.6;
+            color: var(--blue-link);
+            text-decoration: none;
+            cursor: pointer;
+            
+            &:hover {
+                border-bottom: 1px solid var(--blue-link);
+            }
+        }
+    }
+}

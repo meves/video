@@ -1,0 +1,26 @@
+.question {
+    cursor: help;
+    position: relative;
+
+    .prompt {
+        padding: 24px;
+        position: absolute;
+        left: 100%;
+        bottom: 50%;
+        font-family: var(--open-sans);
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 1.7;
+        color: var(--black);
+        border: 1px solid var(--blue-accent);
+        border-radius: 20px;
+        background-color: var(--white);
+        opacity: 0;
+        transition: opacity 0.15s ease-in;
+    }
+
+    &:hover .prompt {
+        opacity: 1;
+    }
+}

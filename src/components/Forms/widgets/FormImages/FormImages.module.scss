@@ -1,0 +1,36 @@
+.passwordImageWrapper {
+    flex: 1 1 50%;
+    display: flex;
+
+    .leftImage {
+        margin-top: 124px;
+    }
+
+    .rightImage {
+        margin-top: 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+
+        .rightTopImage {
+            margin-left: 36px;
+        }
+
+        .rightBottomImage {
+            margin-top: 197px;
+            margin-left: 75px;
+
+            &:img {
+                width: 100%;
+                display: block;
+            }
+        }
+    }
+}
+
+
+.authImageWrapper {
+    max-width: 795px;
+    // flex: 1 1 733px;
+}

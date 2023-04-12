@@ -1,0 +1,36 @@
+.formWrapper {
+    margin-top: 130px;
+
+    .successTitle {
+        margin: 0;
+        font-size: 24px;
+        text-align: center;
+    }
+    .form {
+        flex: 1 1 511px;
+        padding-top: 30px;
+        
+        .fieldset {
+            margin-bottom: 0;
+
+            .inputBlock {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                    
+                .forgetPassword {
+                    margin-left: 280px;
+                    margin-bottom: 8px;
+                    font-size: 16px;
+                    color: var(--blue-link);
+                    text-decoration: none;
+                }                
+            }
+
+            .inputWrapper {
+                margin-bottom: 12px;
+            }
+        }
+        
+    }
+}

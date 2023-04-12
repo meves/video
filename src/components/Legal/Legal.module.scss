@@ -1,0 +1,114 @@
+.sectionWrapper {
+    padding-top: 48px;
+
+    .dataWrapper {
+        text-align: right;
+        margin-bottom: 40px;
+
+        .data {
+            margin: 0;
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 1.6;
+        }
+    }
+
+    .contentWrapper {
+        max-width: 900px;
+        margin: 0 auto;
+
+        .contentHeading {
+            margin: 0;
+            margin-bottom: 32px;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 36px;
+            line-height: 1.3;
+            color: var(--blue-accent);
+        }
+
+        .contentTitle {
+            margin: 0;
+            margin-bottom: 12px;
+            font-weight: 600;
+            font-size: 24px;
+            line-height: 1.6;
+            color: var(--white);
+        }       
+
+        .contentSubtitle {
+            margin: 0;
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 1.6;
+
+            &Lone {
+                margin: 0;
+                margin-bottom: 32px;
+                font-weight: 400;
+                font-size: 24px;
+                line-height: 1.6;
+            }
+        }
+
+        .tetmsTitle {
+            margin: 0;
+            font-weight: 600;
+            font-size: 24px;
+            line-height: 1.6;
+        }
+
+        .contentText {
+            margin: 0;
+            margin-bottom: 24px;
+
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 1.6;
+
+            .contentLink {
+                margin: 0;
+                font-family: var(--open-sans);
+                color: var(--blue-cookie);
+                text-decoration: none;
+                cursor: pointer;
+            }
+        }
+
+        .contentList {
+            margin: 0;
+            margin-bottom: 24px;
+
+            padding-left: 0;
+            list-style: inside;
+        }
+
+        .contentListItem {
+            margin: 0;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        .numeralList {
+            margin: 0;
+            // margin-bottom: 24px;
+            padding-left: 0;
+            list-style: inside;
+            list-style-type: decimal;
+        }
+
+        .hyphenList {
+            margin: 0;
+            margin-left: 20px;
+            margin-bottom: 24px;
+            padding-left: 0;
+            list-style-type: '-';
+
+            .contentListItem {
+                padding-left: 10px;
+            }
+        }
+
+    }
+}

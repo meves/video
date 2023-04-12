@@ -1,0 +1,55 @@
+.textBlock {
+    max-width: 700px;
+    align-self: center;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 1.3;
+
+    .text {
+        margin: 0;
+
+        &:last-of-type {
+            margin-bottom: 40px;
+        }
+    }
+
+    .link {
+        display: inline-block;
+        padding: 12px 40px;
+        border: 1px solid var(--white);
+        border-radius: 72px;
+        font-family: var(--open-sans);
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 1.35;
+        color: var(--white);
+        background-color: var(--transparent);
+        text-decoration: none;
+        transition: color 0.15s ease-in, 
+                    background-color 0.15s ease-in;
+
+        &:hover {
+            cursor: pointer;
+            border-color: transparent;
+            background-color: var(--blue-cookie-hover);
+        }
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    .textBlock {
+        font-size: 26px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .textBlock {
+        font-size: 24px;
+    
+        .text { 
+            &:last-of-type {
+                margin-bottom: 30px;
+            }
+        } 
+    }
+}

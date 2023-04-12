@@ -1,0 +1,138 @@
+.form-button {
+    padding: 14px 89px;
+    border: none;
+    border-radius: 20px;
+    font-family: var(--open-sans);
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1.388888889;
+    transition: color 0.15s ease-in,
+                background-color 0.15s ease-in;
+
+    &_success {
+        color: var(--white);
+        background-color: var(--blue-accent);
+        
+        &:hover {
+            cursor: pointer;
+            background-color: var(--blue-start-hover);
+        }
+
+        &:active {
+            color: var(--black);
+            background-color: var(--blue-start-active);
+        }
+    }
+
+    &_disabled {
+        color: var(--black);
+        background-color: var(--grey);
+        cursor: not-allowed;      
+    }
+}
+
+.error-message {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.2;
+    color: var(--error-color);
+    padding-bottom: 8px;
+}
+
+.input {
+    appearance: none;
+    width: 480px;
+    height: 56px;
+    padding: 12px 17px;
+    margin-right: 7px;
+    font-size: 18px;
+    line-height: 1.2;
+    color: var(--white);                
+    background-color: var(--transparent);
+    border: 1px solid var(--blue-accent);
+    border-radius: 10px;
+    outline: none;
+                        
+        &:focus {
+            color: var(--black);
+            background-color: var(--light-blue);
+            border: 1px solid var(--blue-border);
+        }
+
+        &::placeholder {
+            opacity: 0;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 1.2;
+            color: var(--grey);
+        }
+        &:focus::placeholder {
+            opacity: 1;
+            color: var(--grey);
+        }    
+
+    &_success, &_success:focus {
+        color: var(--green);
+        background-color: var(--light-light-green);
+        border: 1px solid var(--green2);
+        
+        &_success::placeholder {
+            opacity: 0;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 1.2;
+            color: var(--black);
+        }
+        &_success:focus::placeholder {
+            opacity: 1;
+            color: var(--black);
+        }
+    }
+
+    &_error:invalid, &_error:focus, &_error:not(:focus) {
+        color: var(--error-color);
+        background-color: var(--light-light-red);
+        border: 1px solid var(--error-color);
+        
+        &::placeholder {
+            opacity: 0;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 1.2;
+            color: var(--error-color);
+        }
+        &:focus::placeholder {
+            opacity: 1;
+            color: var(--error-color);
+        }
+    }
+}
+
+// галочка если пароли совпадают
+.check-mark {
+    position: absolute;
+    top: 30%;
+    right: 17%;
+    opacity: 0;
+    transition: opacity 0.15s ease-in;
+    
+    &_success {
+        opacity: 1;
+    }
+}
+
+.tooltip {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: 15px;
+    padding: 8px 12px;
+    font-size: 18px;
+    color: var(--white);
+    background-color: red;
+
+    &:hover {
+        cursor: pointer;
+    }
+}

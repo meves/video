@@ -1,0 +1,53 @@
+.formWrapper {
+    margin-top: 35px;
+
+    .form {
+        flex: 1 1 562px;
+        align-items: flex-start;
+        justify-content: flex-start;
+        
+        .fieldset {
+            margin-bottom: 0;
+
+            .inputWrapper {
+                margin-bottom: 12px;
+                
+                &:last-of-type {
+                    margin-bottom: 24px;
+                }
+
+                & > span:last-child {
+                    margin-left: 12px;
+                }
+            }
+        }
+
+        .text {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 1.2;
+
+            .textLink {
+                display: inline-block;
+                color: var(--blue-border);
+                margin-left: 24px;
+                text-decoration: none;
+            }
+        }
+        
+        .buttons {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 27px;
+            margin-top: 17px;
+            margin-bottom: 15px;
+
+            .buttonsRow {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                gap: 24px;
+            }
+        }
+    }
+}

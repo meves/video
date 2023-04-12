@@ -1,0 +1,20 @@
+.timer {
+    display: block;
+    min-width: 42px;
+    font-family: var(--open-sans);
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.3;
+    color: var(--white);
+    text-shadow: 1px 1px 0 black;
+    background-color: var(--transparent);
+    text-align: right;
+
+    &_small {
+        display: inline-block;
+        min-width: 30px;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 1.2;
+    }
+}

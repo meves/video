@@ -1,0 +1,185 @@
+.modalStub {
+
+    .popup__text {
+        margin: 0 0 20px;
+        font-family: var(--open-sans);
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 1.2;
+        color: var(--black);
+    
+        &:first-of-type {
+            margin-bottom: 50px;
+        }
+    
+        &:last-of-type {
+            margin-bottom: 40px;
+        }
+    
+    }
+    
+    .popup__buttons {
+        display: flex;
+        justify-content: space-around;
+    
+        .popup__button {
+            padding: 14px 61px;
+            font-family: var(--open-sans);
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 1.4;
+            color: var(--white);
+            border-radius: 20px;
+            border: none;
+            cursor: pointer;
+            transition: all .4s ease-in-out;
+            
+            &_forvard {
+                background-color: var(--light-green);
+                text-decoration: none;
+            }
+    
+            &_back {
+                background-color:var((--brown-red));
+            }
+    
+            &:hover {
+                transform: scale(1.05);
+            }
+    
+        }
+    }
+} // end of ModalStub
+
+.popupRecord {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-weight: 400;
+    line-height: 1.4;
+    color: var(--black);
+    
+    .title {
+        margin: 32px 0 32px;
+        text-align: center;
+    }
+
+    .buttons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 12px; 
+
+        .blueButton {
+            font-size: 18px;
+            border: 1px solid var(--blue-accent);
+            padding: 16px 32px;
+            background-color: var(--blue-accent);
+            border-radius: 20px;
+            color: var(--white);
+            text-decoration: none;;
+            transition: all 0.15s ease-in;
+
+            &:hover {
+                background-color: var(--blue-start-hover);
+                color: var(--black);
+                border: 1px solid var(--blue-accent);    
+                cursor: pointer;
+            }
+
+            &:active {
+                background-color: var(--blue-start-active);
+            }
+        }
+
+        .whiteButton {
+            font-size: 18px;
+            border: 1px solid var(--blue-accent);
+            border-radius: 20px;
+            padding: 16px 32px;
+            color: var(--black);
+            background-color: var(--white);
+            text-decoration: none;
+            transition: all 0.15s ease-in;
+
+            &:hover {
+                background-color: var(--blue-accent);
+                color: var(--white);
+                cursor: pointer;
+            }
+
+            &:active {
+                background-color: var(--blue-start-active);
+            }
+        }
+
+        .disabled {
+            color: var(--grey);
+
+            &:hover {
+                color: var(--grey);
+                background-color: var(--white);
+                cursor: not-allowed;
+            }
+        }
+    }
+} // end of popupRecord
+
+.popupCookieWrapper {
+    display: flex;
+    justify-content: flex-start;
+    // justify-content: center;
+    align-items: center;
+    gap: 24px;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 48px;
+    background-color: var(--white);
+    border: 1px solid var(--blue-cookie);
+    box-shadow: 0px 14px 42px rgba(121, 163, 211, 0.06);
+    border-radius: 20px;
+
+    .popupCookieImage {
+        display: block;
+        width: 68px;
+        height: 68px;
+    }
+
+    .popupCookieTextWrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .popupCookieText {
+        margin: 0;
+        max-width: 960px;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 1.6;
+        color: var(--black);
+    }
+
+    .popupCookieButton {
+        // margin-left: auto;
+        margin-left: 64px;
+        padding: 14px 51px;
+        font-family: var(--open-sans);
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 25px;
+        color: var(--blue-accent);
+        background-color: transparent;
+        border: 1px solid var(--blue-accent);
+        border-radius: 20px;
+        cursor: pointer;
+
+        &:hover {
+            color: var(--blue-cookie);
+            border: 1px solid var(--blue-cookie);
+        }
+    }
+} // end of PopUpCookie
